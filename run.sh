@@ -3,7 +3,6 @@
 set -e
 
 java \
---illegal-access=permit \
 --add-opens=java.desktop/java.awt=ALL-UNNAMED \
 -Djorgan.skins.path=jorgan-skins \
 -Djorgan.creative.library.path=jorgan-creative/target/native \
