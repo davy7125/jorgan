@@ -82,7 +82,7 @@ public class ConsolePanel extends JPanel {
 				FullScreen.getIDs()));
 		this.screenComboBox.setSelectedItem(console.getScreen());
 
-		this.zoomSpinner.setValue((double)console.getZoom());
+		this.zoomSpinner.setValue(new Double(console.getZoom()));
 	}
 
 	public void apply() {

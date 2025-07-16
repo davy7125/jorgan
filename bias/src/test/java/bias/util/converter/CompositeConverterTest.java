@@ -105,9 +105,9 @@ public class CompositeConverterTest extends TestCase {
 				}.getType()));
 
 		Map<Integer, String> map = new HashMap<Integer, String>();
-		map.put(1, "one");
-		map.put(2, "two");
-		map.put(3, "three");
+		map.put(new Integer(1), "one");
+		map.put(new Integer(2), "two");
+		map.put(new Integer(3), "three");
 		assertEquals(" 1 one 2 two 3 three", converter.toString(map,
 				new TypeReference<Map<Integer, String>>() {
 				}.getType()));
@@ -162,13 +162,13 @@ public class CompositeConverterTest extends TestCase {
 		assertEquals(Boolean.TRUE, converter.fromString("true", Boolean.class));
 		assertEquals(new Character('A'), converter.fromString("A",
 				Character.class));
-		assertEquals((byte) 1, converter.fromString("1", Byte.class));
-		assertEquals((short) 2, converter.fromString("2",
+		assertEquals(new Byte((byte) 1), converter.fromString("1", Byte.class));
+		assertEquals(new Short((short) 2), converter.fromString("2",
 				Short.class));
-		assertEquals(3, converter.fromString("3", Integer.class));
-		assertEquals(4L, converter.fromString("4", Long.class));
-		assertEquals(5.1f, converter.fromString("5.1", Float.class));
-		assertEquals(6.2d, converter
+		assertEquals(new Integer(3), converter.fromString("3", Integer.class));
+		assertEquals(new Long(4), converter.fromString("4", Long.class));
+		assertEquals(new Float(5.1f), converter.fromString("5.1", Float.class));
+		assertEquals(new Double(6.2d), converter
 				.fromString("6.2", Double.class));
 		assertEquals(new BigInteger("7"), converter.fromString("7",
 				BigInteger.class));
@@ -186,9 +186,9 @@ public class CompositeConverterTest extends TestCase {
 				}.getType()));
 
 		Map<Integer, String> map = new HashMap<Integer, String>();
-		map.put(1, "one");
-		map.put(2, "two");
-		map.put(3, "three");
+		map.put(new Integer(1), "one");
+		map.put(new Integer(2), "two");
+		map.put(new Integer(3), "three");
 		assertEquals(map, converter.fromString(",1,one,2,two,3,three",
 				new TypeReference<Map<Integer, String>>() {
 				}.getType()));

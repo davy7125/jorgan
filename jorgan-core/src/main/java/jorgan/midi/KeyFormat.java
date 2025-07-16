@@ -67,7 +67,7 @@ public Object parseObject(String source, ParsePosition pos) {
         pitch++;
       }
 
-      return pitch;
+      return new Integer(pitch);
     } catch (Exception ex) {
       throw new IllegalArgumentException(source);
     }

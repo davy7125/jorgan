@@ -140,7 +140,7 @@ public class MidiMergerCategory extends JOrganCategory {
 			case 1:
 				return input.getDevice();
 			case 2:
-				return input.getChannel() + 1;
+				return new Integer(input.getChannel() + 1);
 			}
 			return null;
 		}
