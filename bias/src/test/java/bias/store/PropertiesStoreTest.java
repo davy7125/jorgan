@@ -65,7 +65,7 @@ public class PropertiesStoreTest extends TestCase {
 		assertEquals("test", value);
 	}
 	
-	public void testGetValueUnkownKey() throws Exception {
+	public void testGetValueUnknownKey() throws Exception {
 		try {
 			store.getValue(KEY, String.class);
 			fail();

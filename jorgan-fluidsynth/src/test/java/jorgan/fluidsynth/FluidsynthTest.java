@@ -43,7 +43,7 @@ public class FluidsynthTest extends TestCase {
 		}
 
 		try {
-			new Fluidsynth("unkown driver", 16, "foo_bar");
+			new Fluidsynth("unknown driver", 16, "foo_bar");
 			fail();
 		} catch (IOException expected) {
 		}

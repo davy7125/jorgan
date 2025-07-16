@@ -211,7 +211,7 @@ public class Organ {
 	public void removeElement(final Element element) {
 
 		if (element.getOrgan() != this) {
-			throw new IllegalArgumentException("unkown element "
+			throw new IllegalArgumentException("unknown element "
 					+ element.getName() + "'");
 		}
 
@@ -354,7 +354,7 @@ public class Organ {
 
 	public Element duplicate(Element element) {
 		if (element.getOrgan() != this) {
-			throw new IllegalArgumentException("unkown element "
+			throw new IllegalArgumentException("unknown element "
 					+ element.getName() + "'");
 		}
 
@@ -381,6 +381,6 @@ public class Organ {
 			}
 		}
 
-		throw new IllegalArgumentException("unkown id '" + id + "'");
+		throw new IllegalArgumentException("unknown id '" + id + "'");
 	}
 }

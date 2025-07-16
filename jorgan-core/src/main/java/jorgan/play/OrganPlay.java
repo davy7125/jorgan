@@ -251,7 +251,7 @@ public abstract class OrganPlay {
 
 		Player<?> player = getPlayer(element);
 		if (player == null) {
-			throw new IllegalArgumentException("unkown element");
+			throw new IllegalArgumentException("unknown element");
 		}
 
 		playing.play(player);

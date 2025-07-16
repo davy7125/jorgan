@@ -367,7 +367,7 @@ public class FluidsynthSound extends Sound {
 	public void changeTuning(final Tuning tuning, final String name,
 			final double[] derivations) {
 		if (!tunings.contains(tuning)) {
-			throw new IllegalArgumentException("unkown tuning");
+			throw new IllegalArgumentException("unknown tuning");
 		}
 
 		final String oldName = tuning.getName();
@@ -420,7 +420,7 @@ public class FluidsynthSound extends Sound {
 
 	public void removeTuning(final Tuning tuning) {
 		if (!tunings.contains(tuning)) {
-			throw new IllegalArgumentException("unkown tuning");
+			throw new IllegalArgumentException("unknown tuning");
 		}
 
 		tunings.remove(tuning);

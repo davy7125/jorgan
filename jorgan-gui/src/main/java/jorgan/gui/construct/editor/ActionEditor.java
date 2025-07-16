@@ -68,6 +68,6 @@ public class ActionEditor extends PropertyEditorSupport {
 				return;
 			}
 		}
-		throw new IllegalArgumentException("unkown action");
+		throw new IllegalArgumentException("unknown action");
 	}
 }

@@ -224,7 +224,7 @@ public class Interpreter {
 
 	/**
 	 * Get the command for the given name. If no command for the name can be looked
-	 * up, the 'unkown' command will be returned.
+	 * up, the 'unknown' command will be returned.
 	 * 
 	 * @param name name to get command for
 	 * @return the command

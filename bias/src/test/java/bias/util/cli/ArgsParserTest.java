@@ -79,7 +79,7 @@ public class ArgsParserTest extends TestCase {
 		assertEquals("World", operands[1]);
 	}
 
-	public void testUnkownOption() throws CLIException {
+	public void testUnknownOption() throws CLIException {
 		ArgsParser parser = new ArgsParser("test");
 		parser.writeUsage();
 

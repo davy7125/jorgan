@@ -85,7 +85,7 @@ public class ResourceBundlesStore extends ConvertingStore {
 			relativeKey = relativeKey.substring(index + 1);
 		}
 
-		throw new ConfigurationException("unkown key '" + key + "'");
+		throw new ConfigurationException("unknown key '" + key + "'");
 	}
 
 	private ResourceBundle getBundle(String path) {

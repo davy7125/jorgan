@@ -168,7 +168,7 @@ public class Console extends Displayable {
 	public void toFront(final Element element) {
 		final LocationReference reference = (LocationReference) getReference(element);
 		if (reference == null) {
-			throw new IllegalArgumentException("unkown element");
+			throw new IllegalArgumentException("unknown element");
 		}
 
 		moveReference(reference, references.size() - 1);
@@ -183,7 +183,7 @@ public class Console extends Displayable {
 	public void toBack(Element element) {
 		LocationReference reference = (LocationReference) getReference(element);
 		if (reference == null) {
-			throw new IllegalArgumentException("unkown element");
+			throw new IllegalArgumentException("unknown element");
 		}
 
 		moveReference(reference, 0);

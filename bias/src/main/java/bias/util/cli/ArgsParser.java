@@ -147,7 +147,7 @@ public class ArgsParser {
 				return;
 			}
 		}
-		throw new CLIException("option '" + arg + "' is unkown");
+		throw new CLIException("option '" + arg + "' is unknown");
 	}
 
 	private void parseOptions(String arg) throws CLIException {
@@ -163,7 +163,7 @@ public class ArgsParser {
 			}
 
 			throw new CLIException("option '-" + arg.charAt(parseFrom)
-					+ "' is unkown");
+					+ "' is unknown");
 		}
 	}
 

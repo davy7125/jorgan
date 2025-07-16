@@ -158,7 +158,7 @@ public class Property {
 		}
 
 		if (getter == null && setter == null) {
-			throw new ConfigurationException("unkown property '" + this.name
+			throw new ConfigurationException("unknown property '" + this.name
 					+ "' of class " + owningClass.getName());
 		}
 	}

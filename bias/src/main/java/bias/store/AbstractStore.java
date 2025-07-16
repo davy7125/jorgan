@@ -95,7 +95,7 @@ public abstract class AbstractStore implements Store {
 
 	public final Object getValue(String key, Type type) {
 		if (!getKeys(getPath(key)).contains(key)) {
-			throw new ConfigurationException("unkown key '" + key + "'");
+			throw new ConfigurationException("unknown key '" + key + "'");
 		}
 		return getValueImpl(key, type);
 	}

@@ -89,7 +89,7 @@ public class LinuxsamplerSoundPlayer extends
 
 			clone = (LinuxsamplerSound) sound.clone();
 		} catch (UnknownHostException e) {
-			addProblem(Severity.ERROR, "host", "unkownHost", sound.getHost());
+			addProblem(Severity.ERROR, "host", "unknownHost", sound.getHost());
 			return;
 		} catch (SocketTimeoutException e) {
 			addProblem(Severity.ERROR, "host", "hostTimeout");

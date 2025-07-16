@@ -219,7 +219,7 @@ public abstract class Element implements Cloneable {
 		}
 
 		if (filter == null) {
-			throw new IllegalArgumentException("unkown element");
+			throw new IllegalArgumentException("unknown element");
 		}
 
 		return filter;
@@ -466,7 +466,7 @@ public abstract class Element implements Cloneable {
 
 	public void removeMessage(final Message message) {
 		if (!this.messages.contains(message)) {
-			throw new IllegalArgumentException("unkown message");
+			throw new IllegalArgumentException("unknown message");
 		}
 
 		final int index = messages.indexOf(message);
@@ -519,7 +519,7 @@ public abstract class Element implements Cloneable {
 
 	public void changeMessage(final Message message, final Tuple tuple) {
 		if (!this.messages.contains(message)) {
-			throw new IllegalArgumentException("unkown message");
+			throw new IllegalArgumentException("unknown message");
 		}
 
 		final Tuple oldTuple = message.getTuple();

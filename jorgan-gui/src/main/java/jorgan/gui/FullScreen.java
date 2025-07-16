@@ -313,7 +313,7 @@ public class FullScreen extends JDialog implements ConsoleStack {
 			}
 		}
 
-		throw new IllegalArgumentException("unkown device '" + screen + "'");
+		throw new IllegalArgumentException("unknown device '" + screen + "'");
 	}
 
 	public static FullScreen create(OrganSession session, String screen,

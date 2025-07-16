@@ -56,7 +56,7 @@ public class WeakSet<E> extends AbstractSet<E> implements Set<E> {
 		return set.size();
 	}
 
-	private static Object UNKOWN = new Object();
+	private static Object UNKNOWN = new Object();
 
 	@Override
 	public Iterator<E> iterator() {
@@ -66,10 +66,10 @@ public class WeakSet<E> extends AbstractSet<E> implements Set<E> {
 			Iterator<WeakObject<E>> iter = set.iterator();
 
 			/** The next available object. */
-			Object next = UNKOWN;
+			Object next = UNKNOWN;
 
 			public boolean hasNext() {
-				if (next == UNKOWN) {
+				if (next == UNKNOWN) {
 					while (iter.hasNext()) {
 						WeakObject<E> weak = iter.next();
 						Object obj = null;
@@ -88,12 +88,12 @@ public class WeakSet<E> extends AbstractSet<E> implements Set<E> {
 
 			@SuppressWarnings("unchecked")
 			public E next() {
-				if ((next == UNKOWN) && !hasNext()) {
+				if ((next == UNKNOWN) && !hasNext()) {
 					throw new NoSuchElementException();
 				}
 
 				E e = (E) next;
-				next = UNKOWN;
+				next = UNKNOWN;
 
 				return e;
 			}
