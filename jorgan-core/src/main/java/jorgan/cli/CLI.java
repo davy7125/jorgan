@@ -482,7 +482,7 @@ public class CLI implements UI, SessionAware {
 
 				for (int r = 0; r < recents.size(); r++) {
 					File recent = recents.get(r);
-					writeMessage("recentElement", new Object[] { new Integer(r + 1), recent });
+					writeMessage("recentElement", new Object[] { r + 1, recent });
 				}
 			} else {
 				File file;
@@ -490,8 +490,8 @@ public class CLI implements UI, SessionAware {
 					int index = Integer.parseInt(param) - 1;
 					file = recents.get(index);
 				} catch (RuntimeException ex) {
-					Integer from = new Integer(1);
-					Integer to = new Integer(recents.size());
+					Integer from = 1;
+					Integer to = recents.size();
 					writeMessage("recentParameter", new Object[] { from, to });
 					return;
 				}

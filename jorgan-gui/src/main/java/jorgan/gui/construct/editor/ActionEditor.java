@@ -64,7 +64,7 @@ public class ActionEditor extends PropertyEditorSupport {
 
 		for (int t = 0; t < tags.length; t++) {
 			if (tags[t].equals(string)) {
-				setValue(new Integer(t));
+				setValue(t);
 				return;
 			}
 		}

@@ -31,8 +31,7 @@ public class ValueEditor extends SpinnerEditor {
 	private NumberFormat format = new DecimalFormat();
 
 	public ValueEditor() {
-		super(new SpinnerNumberModel(new Float(0.0f), new Float(0.0f),
-				new Float(1.0f), new Float(0.01f)));
+		super(new SpinnerNumberModel(0.0f, 0.0f, 1.0f, 0.01f));
 	}
 
 	@Override

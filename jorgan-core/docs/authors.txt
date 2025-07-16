@@ -4,7 +4,7 @@ The team behind jOrgan (sorted by last name) :
       . Sven Meier <sven@meiers.net>
 
     Contributors :
-      . Sörfõzõ Bence <sfbence@egon.gyaloglo.hu> (theatre skin)
+      . SÃ¶rfÅ‘zÅ‘ Bence <sfbence@egon.gyaloglo.hu> (theatre skin)
       . Bernd Casper <bca@free-artists.net> (concepts, element icons)
       . Graham Goode <ggoode.sa@gmail.com> (Fluidsynth)
       . Dan Dietzer <ddietzer@bex.net> (Windows 64bit build) 
@@ -14,6 +14,7 @@ The team behind jOrgan (sorted by last name) :
       . Giacomo Mazzullo <giacmazz@tiscalinet.it> (Italian translation)
       . Kristian Skordal Thorsen <kristian.thorsen@bigfoot.com> (Norwegian translation)
       . Martin Slavik <martin.slavik@tul.cz> (Czech translation)
+      . Davy Triponney <davy.triponney@gmail.com> (French translation)
 
     User Feedback and Food for Thought :
       . Marco Francesco <ogiogiogella@gmail.com>

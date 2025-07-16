@@ -456,7 +456,7 @@ public class OrganFrame extends JFrame implements SessionAware {
 			String name = file.getPath();
 
 			putValue(Action.SHORT_DESCRIPTION, name);
-			putValue(Action.MNEMONIC_KEY, new Integer(KeyEvent.VK_0 + number));
+			putValue(Action.MNEMONIC_KEY, KeyEvent.VK_0 + number);
 
 			int index = name.indexOf(File.separatorChar);
 			int lastIndex = name.lastIndexOf(File.separatorChar);
