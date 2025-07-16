@@ -7,6 +7,8 @@
 #include "fluidsynth.h"
 #include "jorgan_fluidsynth_Fluidsynth.h"
 
+#define FS_API_VERSION ((FLUIDSYNTH_VERSION_MAJOR << 8) | FLUIDSYNTH_VERSION_MINOR)
+
 typedef struct _Context {
 	fluid_settings_t* settings;
 	fluid_synth_t* synth;
@@ -180,28 +182,51 @@ JNIEXPORT
 void JNICALL Java_jorgan_fluidsynth_Fluidsynth_setReverbOn(JNIEnv* env, jclass jclass, jobject jcontext, jboolean jon) {
 	Context* context = (Context*) (*env)->GetDirectBufferAddress(env, jcontext);
 
+#if FS_API_VERSION >= 0x0202
+	fluid_synth_reverb_on(context->synth, -1, jon);
+#else
 	fluid_synth_set_reverb_on(context->synth, jon);
+#endif
 }
 
 JNIEXPORT
 void JNICALL Java_jorgan_fluidsynth_Fluidsynth_setReverb(JNIEnv* env, jclass jclass, jobject jcontext, jdouble jroomsize, jdouble jdamping, jdouble jwidth, jdouble jlevel) {
 	Context* context = (Context*) (*env)->GetDirectBufferAddress(env, jcontext);
 
-	fluid_synth_set_reverb(context->synth, jroomsize, jdamping, jwidth, jlevel);
+#if FS_API_VERSION >= 0x0202
+	fluid_synth_set_reverb_group_roomsize(context->synth, -1, jroomsize);
+	fluid_synth_set_reverb_group_damp(context->synth, -1, jdamping);
+	fluid_synth_set_reverb_group_width(context->synth, -1, jwidth);
+	fluid_synth_set_reverb_group_level(context->synth, -1, jlevel);
+#else
+  fluid_synth_set_reverb(context->synth, jroomsize, jdamping, jwidth, jlevel);
+#endif
 }
 
 JNIEXPORT
 void JNICALL Java_jorgan_fluidsynth_Fluidsynth_setChorusOn(JNIEnv* env, jclass jclass, jobject jcontext, jboolean jon) {
 	Context* context = (Context*) (*env)->GetDirectBufferAddress(env, jcontext);
 
+#if FS_API_VERSION >= 0x0202
+	fluid_synth_chorus_on(context->synth, -1, jon);
+#else
 	fluid_synth_set_chorus_on(context->synth, jon);
+#endif
 }
 
 JNIEXPORT
 void JNICALL Java_jorgan_fluidsynth_Fluidsynth_setChorus(JNIEnv* env, jclass jclass, jobject jcontext, jint jnr, jdouble jlevel, jdouble jspeed, jdouble jdepth_ms, jint jtype) {
 	Context* context = (Context*) (*env)->GetDirectBufferAddress(env, jcontext);
 
-	fluid_synth_set_chorus(context->synth, jnr, jlevel, jspeed, jdepth_ms, jtype);
+#if FS_API_VERSION >= 0x0202
+  fluid_synth_set_chorus_group_nr(context->synth, -1, jnr);
+  fluid_synth_set_chorus_group_level(context->synth, -1, jlevel);
+  fluid_synth_set_chorus_group_speed(context->synth, -1, jspeed);
+  fluid_synth_set_chorus_group_depth(context->synth, -1, jdepth_ms);
+  fluid_synth_set_chorus_group_type(context->synth, -1, jtype);
+#else
+  fluid_synth_set_chorus(context->synth, jnr, jlevel, jspeed, jdepth_ms, jtype);
+#endif
 }
 
 JNIEXPORT
