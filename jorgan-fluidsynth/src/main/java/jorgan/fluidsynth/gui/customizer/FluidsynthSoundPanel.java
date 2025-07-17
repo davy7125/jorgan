@@ -64,8 +64,8 @@ public class FluidsynthSoundPanel extends JPanel {
 		Column firstColumn = builder.column();
 
 		firstColumn.term(config.get("gain").read(new JLabel()));
-		gainSpinner = new JSpinner(new SpinnerNumberModel(new Float(0.2468f),
-				new Float(0.0f), new Float(1.0f), new Float(0.01f)));
+		gainSpinner = new JSpinner(new SpinnerNumberModel(Float.valueOf(0.2468f),
+				Float.valueOf(0.0f), Float.valueOf(1.0f), Float.valueOf(0.01f)));
 		SpinnerUtils.setColumns(gainSpinner, 5);
 		firstColumn.definition(gainSpinner);
 

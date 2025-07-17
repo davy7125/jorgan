@@ -63,7 +63,7 @@ public class Convert {
 
 	public InputStream convert(InputStream in) throws IOException {
 		TransformerFactory factory = TransformerFactory.newInstance();
-		factory.setAttribute("indent-number", new Integer(4));
+		factory.setAttribute("indent-number", Integer.valueOf(4));
 
 		Transformer transform;
 		try {

@@ -131,7 +131,7 @@ public class OptionsPanel extends JPanel {
 		@Override
 		protected Object getValue(Bank bank, int columnIndex) {
 			if (columnIndex == 0) {
-				return new Integer(bank.number);
+				return Integer.valueOf(bank.number);
 			} else {
 				return bank.name;
 			}

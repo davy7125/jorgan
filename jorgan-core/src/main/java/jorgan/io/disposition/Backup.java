@@ -140,6 +140,6 @@ public class Backup {
 			}
 		}
 
-		file.renameTo(getHistory(new Integer(free)));
+		file.renameTo(getHistory(Integer.valueOf(free)));
 	}
 }

@@ -37,7 +37,6 @@ import javax.swing.KeyStroke;
 
 import junit.framework.TestCase;
 import bias.util.TypeReference;
-import bias.util.converter.CompositeConverter;
 
 /**
  * Test for {@link CompositeConverter}s.
@@ -77,7 +76,7 @@ public class CompositeConverterTest extends TestCase {
 		assertEquals("de_DE", converter.toString(new Locale("de", "DE"),
 				Locale.class));
 		assertEquals("true", converter.toString(Boolean.TRUE, Boolean.class));
-		assertEquals("A", converter.toString(new Character('A'),
+		assertEquals("A", converter.toString(Character.valueOf('A'),
 				Character.class));
 		assertEquals("1", converter
 				.toString(Byte.valueOf((byte) 1), Byte.class));
@@ -105,9 +104,9 @@ public class CompositeConverterTest extends TestCase {
 				}.getType()));
 
 		Map<Integer, String> map = new HashMap<Integer, String>();
-		map.put(new Integer(1), "one");
-		map.put(new Integer(2), "two");
-		map.put(new Integer(3), "three");
+		map.put(Integer.valueOf(1), "one");
+		map.put(Integer.valueOf(2), "two");
+		map.put(Integer.valueOf(3), "three");
 		assertEquals(" 1 one 2 two 3 three", converter.toString(map,
 				new TypeReference<Map<Integer, String>>() {
 				}.getType()));
@@ -160,15 +159,15 @@ public class CompositeConverterTest extends TestCase {
 		assertEquals(new Locale("de", "DE"), converter.fromString("de_DE",
 				Locale.class));
 		assertEquals(Boolean.TRUE, converter.fromString("true", Boolean.class));
-		assertEquals(new Character('A'), converter.fromString("A",
+		assertEquals(Character.valueOf('A'), converter.fromString("A",
 				Character.class));
-		assertEquals(new Byte((byte) 1), converter.fromString("1", Byte.class));
-		assertEquals(new Short((short) 2), converter.fromString("2",
+		assertEquals(Byte.valueOf((byte) 1), converter.fromString("1", Byte.class));
+		assertEquals(Short.valueOf((short) 2), converter.fromString("2",
 				Short.class));
-		assertEquals(new Integer(3), converter.fromString("3", Integer.class));
-		assertEquals(new Long(4), converter.fromString("4", Long.class));
-		assertEquals(new Float(5.1f), converter.fromString("5.1", Float.class));
-		assertEquals(new Double(6.2d), converter
+		assertEquals(Integer.valueOf(3), converter.fromString("3", Integer.class));
+		assertEquals(Long.valueOf(4), converter.fromString("4", Long.class));
+		assertEquals(Float.valueOf(5.1f), converter.fromString("5.1", Float.class));
+		assertEquals(Double.valueOf(6.2d), converter
 				.fromString("6.2", Double.class));
 		assertEquals(new BigInteger("7"), converter.fromString("7",
 				BigInteger.class));
@@ -186,9 +185,9 @@ public class CompositeConverterTest extends TestCase {
 				}.getType()));
 
 		Map<Integer, String> map = new HashMap<Integer, String>();
-		map.put(new Integer(1), "one");
-		map.put(new Integer(2), "two");
-		map.put(new Integer(3), "three");
+		map.put(Integer.valueOf(1), "one");
+		map.put(Integer.valueOf(2), "two");
+		map.put(Integer.valueOf(3), "three");
 		assertEquals(map, converter.fromString(",1,one,2,two,3,three",
 				new TypeReference<Map<Integer, String>>() {
 				}.getType()));

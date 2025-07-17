@@ -25,7 +25,7 @@ public class CharacterConverter implements Converter {
 	public Object fromString(String string, Type type) {
 		if (string.length() == 6 && string.startsWith("\\u")) {
 			int code = Integer.parseInt(string.substring(2), 16);		
-			return new Character((char) code);
+			return Character.valueOf((char) code);
 		}
 		return string.charAt(0);
 	}
