@@ -117,7 +117,7 @@
     </stop>
     <label id="7">
       <name></name>
-      <description>name=Stop 0 and Stop 1 control Rank 0 and Rank 1 respectively, each utilizing the same Fluidsynth Sound.</description>
+      <description>name=Stop 0 and Stop 1 control Rank 0 and Rank 1 respectively, each utilizing the same FluidSynth Sound.</description>
       <references/>
       <messages/>
       <zoom>1.0</zoom>
@@ -179,7 +179,7 @@
     </label>
     <label id="11">
       <name></name>
-      <description>name=Open the Tunings View and select the Fluidsynth Sound to inspect the configured tunings.</description>
+      <description>name=Open the Tunings View and select the FluidSynth Sound to inspect the configured tunings.</description>
       <references/>
       <messages/>
       <zoom>1.0</zoom>

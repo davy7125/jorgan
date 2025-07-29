@@ -1,7 +1,7 @@
 <backend>
   <name>Direct Sound (32bit)</name>
   <description>Audio output with Direct Sound
-- Fluidsynth 2.0.5
+- FluidSynth 2.0.5
 - Glib 2.0</description>
   <version>1</version>
   <maintainer>Graham Goode (ggoode.sa@gmail.com)</maintainer>
@@ -10,7 +10,7 @@
   <library>libgthread-2.0-0.dll</library>
   <library>libfluidsynth.dll</library>
   <link>
-	<text>Fluidsynth</text>
+	<text>FluidSynth</text>
 	<url>http://fluidsynth.sf.net</url>
 	<icon>fluidsynth.png</icon>
   </link>

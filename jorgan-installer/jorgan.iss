@@ -54,7 +54,7 @@ Name: "creative"; Description: "Creative Soundblaster"; Types: standard
 #endif
 Name: "customizer"; Description: "Customizer"; Types: standard
 Name: "executor"; Description: "Executor"; Types: standard
-Name: "fluidsynth"; Description: "Fluidsynth Sampler"; Types: standard
+Name: "fluidsynth"; Description: "FluidSynth Sampler"; Types: standard
 Name: "importer"; Description: "Importer"; Types: standard
 Name: "exporter"; Description: "Exporter"; Types: standard
 Name: "keyboard"; Description: "Keyboard"; Types: standard

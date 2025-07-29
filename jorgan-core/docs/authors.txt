@@ -6,7 +6,7 @@ The team behind jOrgan (sorted by last name) :
     Contributors :
       . Sörfőző Bence <sfbence@egon.gyaloglo.hu> (theatre skin)
       . Bernd Casper <bca@free-artists.net> (concepts, element icons)
-      . Graham Goode <ggoode.sa@gmail.com> (Fluidsynth)
+      . Graham Goode <ggoode.sa@gmail.com> (FluidSynth)
       . Dan Dietzer <ddietzer@bex.net> (Windows 64bit build) 
 
     Translators :
