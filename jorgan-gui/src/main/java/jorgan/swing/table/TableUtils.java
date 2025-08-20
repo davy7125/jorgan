@@ -82,6 +82,7 @@ public class TableUtils {
 		table.setFillsViewportHeight(true);
 		// table.putClientProperty("JTable.autoStartsEdit", Boolean.TRUE);
 		table.putClientProperty("terminateEditOnFocusLost", Boolean.TRUE);
+		table.setRowHeight((int)(1.3 * table.getFont().getSize()));
 	}
 
 	/**
