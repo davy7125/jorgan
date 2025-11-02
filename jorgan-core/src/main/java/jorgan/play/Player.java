@@ -120,7 +120,7 @@ public abstract class Player<E extends Element> {
 
 	/**
 	 * Perform subclass specific initialization on opening of this player, e.g.
-	 * aquire MIDI resources. <br>
+	 * acquire MIDI resources. <br>
 	 * This default implementation does nothing.
 	 */
 	protected void openImpl() {

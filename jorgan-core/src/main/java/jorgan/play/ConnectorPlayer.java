@@ -121,6 +121,15 @@ public class ConnectorPlayer<E extends Connector> extends Player<E> {
 			MidiMessage midiMessage = MessageUtils.createMessage(datas);
 
 			fireSent(midiMessage);
+			
+			Connector connector = getElement();
+			int delayMs = connector.getSendDelayMs();
+			if (delayMs > 0)
+			{
+				try {
+					Thread.sleep(delayMs);
+				} catch (InterruptedException e) {}
+			}
 
 			receiver.send(midiMessage, -1);
 		}

@@ -20,6 +20,7 @@ package jorgan.gui.construct.info;
 
 import jorgan.disposition.Connector;
 import jorgan.gui.construct.editor.InDeviceEditor;
+import jorgan.gui.construct.editor.IntegerEditor;
 import jorgan.gui.construct.editor.OutDeviceEditor;
 
 /**
@@ -33,5 +34,6 @@ public class ConnectorBeanInfo extends ElementBeanInfo {
 
 		add("input", Connector.class, InDeviceEditor.class);
 		add("output", Connector.class, OutDeviceEditor.class);
+		add("sendDelayMs", Connector.class, IntegerEditor.class);
 	}
 }

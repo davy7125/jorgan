@@ -7,7 +7,7 @@ import javax.sound.midi.Receiver;
 
 /**
  * A protection against dead-locks caused by both {@link Receiver}s and non-Midi
- * threads trying to aquire a shared lock.
+ * threads trying to acquire a shared lock.
  * <p>
  * {@link MidiSystem} synchronizes on the list of {@link Receiver}s while
  * delivering {@link MidiMessage}s (lock A). If a {@link Receiver}'s code
@@ -15,7 +15,7 @@ import javax.sound.midi.Receiver;
  * dead-lock:
  * <ul>
  * <li>the {@link MidiSystem} prepares a {@link MidiMessage} holding lock A,</li>
- * <li>another thread aquires lock B to close the {@link MidiDevice},</li>
+ * <li>another thread acquires lock B to close the {@link MidiDevice},</li>
  * <li>closing the {@link MidiDevice} is blocked by lock A</li>
  * <li>the {@link Receiver}'s code is blocked by lock B</li>
  * </ul>

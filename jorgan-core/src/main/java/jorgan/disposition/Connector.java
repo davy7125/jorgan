@@ -29,6 +29,8 @@ public class Connector extends Element implements Input, Output {
 
 	private String output;
 
+	private int sendDelayMs = 0;
+
 	public void setInput(String input) {
 		if (!Null.safeEquals(this.input, input)) {
 			String oldInput = this.input;
@@ -55,6 +57,24 @@ public class Connector extends Element implements Input, Output {
 
 	public String getOutput() {
 		return output;
+	}
+
+	public void setSendDelayMs(int sendDelayMs) {
+		if (sendDelayMs < 0)
+			sendDelayMs = 0;
+		else if (sendDelayMs > 20)
+		  sendDelayMs = 20;
+		if (!Null.safeEquals(this.sendDelayMs, sendDelayMs)) {
+			int oldSendDelayMs = this.sendDelayMs;
+
+			this.sendDelayMs = sendDelayMs;
+
+			fireChange(new PropertyChange(oldSendDelayMs, this.sendDelayMs));
+		}
+	}
+
+	public int getSendDelayMs() {
+		return sendDelayMs;
 	}
 
 	@Override
